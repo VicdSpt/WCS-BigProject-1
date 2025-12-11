@@ -11,7 +11,7 @@
 <body>
 
     <nav class="navbar">
-        <img src="#" class="logo-wcs" alt="Logo" />
+        <img src="/images/logo.svg" class="logo-wcs" alt="Logo" />
         <div class="links-container">
             <a class="navlinks" href="#">Jouer</a>
             <a class="navlinks" href="#">Classement</a>
@@ -23,15 +23,13 @@
 
         <header class="header-page">
             <h1>Le Super Quiz des Villes des Wilders du Nord au Sud et de l'Est à l'Ouest !</h1>
-            <img src="#" class="avatar-picture" alt="avatar picture" />
         </header>
 
         <!-- section start du quiz -->
-        <div class="quiz-section">
+        <div class="quiz-section-start">
             <div class="start-section">
                 <p>Découvrez si vous connaissez nos villes</p>
-                <img src="/images/boussole.png" alt="drawing" />
-                <input type="text" placeholder="Enter your name">
+                <img src="/images/boussole.png" alt="drawing" class="image-boussole"/>
                 <button class="btn-start">Commencer le Super Quiz</button>
             </div>
         </div>
@@ -39,20 +37,19 @@
 
         <!-- section questions du quiz -->
         <div class="quiz-section">
-            <div class="question-progress">Question: 1 / 8</div>
             <div class="question">Quel est la capitale de l'Europe ?</div>
-            <div class="choices">
-                <div class="choice">Londres</div>
-                <div class="choice">Paris</div>
-                <div class="choice">Bruxelles</div>
-                <div class="choice">Berlin</div>
+            <div class="button-choices">
+                <button class="btn-choice">Londres</button>
+                <button class="btn-choice">Paris</button>
+                <button class="btn-choice">Bruxelles</button>
+                <button class="btn-choice">Berlin</button>
             </div>
             <button class="btn-next">Question Suivante</button>
         </div>
         <!-- section questions du quiz -->
 
         <!-- section résultats -->
-        <div class="quiz-section">
+        <div class="quiz-section-finish">
             <div>
                 <div class="final-score">Score: 1 / 10</div>
                 <div class="final-message">T'es mauvais !</div>
