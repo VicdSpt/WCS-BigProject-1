@@ -180,4 +180,4 @@ document.addEventListener("DOMContentLoaded", () => {
     quizSection.style.display = "block";
   });
 });
-quizSection.classList.add("show");
+
