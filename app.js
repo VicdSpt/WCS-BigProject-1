@@ -169,5 +169,15 @@ const citiesQuestions = [
   ]
 }
 ]
+// Js pour le bouton commencer le jeu, à améliorer
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.querySelector(".btn-start");
+  const quizSection = document.querySelector(".quiz-section");
+  const startSection = document.querySelector(".quiz-section-start");
 
-
+  startBtn.addEventListener("click", () => {
+    startSection.style.display = "none";
+    quizSection.style.display = "block";
+  });
+});
+quizSection.classList.add("show");
