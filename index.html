@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,12 +9,9 @@
 </head>
 
 <body>
-    <div class="main-content">
 
     <nav class="navbar">
-        <a href="https://www.wildcodeschool.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/logo.svg" class="logo-wcs" alt="Logo de la Wild Code School" />
-        </a>
+        <img src="images/logo.svg" class="logo-wcs" alt="Logo Wild Code School" />
         <div class="links-container">
             <a class="navlinks" href="#">Jouer</a>
             <a class="navlinks" href="#">Classement</a>
@@ -22,49 +19,36 @@
         </div>
     </nav>
 
-    <main>
+    <div class="container">
 
-        <div class="container">
+        <header class="header-page">
+            <h1>Le Quiz des Villes des Wilders</h1>
+        </header>
 
-            <header class="header-page">
-                <h1>Le Super Quiz des Villes des Wilders du Nord au Sud et de l'Est à l'Ouest !</h1>
-            </header>
-
-            <!-- section start du quiz -->
-            <section class="quiz-section-start">
-                <div class="start-section">
-                    <p>Découvrez si vous connaissez nos villes</p>
-                    <img src="/images/boussole.png" alt="Image représentant une boussole" class="image-boussole" />
-                    <button type="button" class="btn-start">Commencer le Super Quiz</button>
-                </div>
-            </section>
-            <!-- section start du quiz -->
-
-            <!-- section questions du quiz -->
-            <section class="quiz-section">
-                <div class="question">Quelle est la capitale de l'Europe ?</div>
-                <div class="button-choices">
-                    <button type="button" class="btn-choice">Londres</button>
-                    <button type="button" class="btn-choice">Paris</button>
-                    <button type="button" class="btn-choice">Bruxelles</button>
-                    <button type="button" class="btn-choice">Berlin</button>
-                </div>
-                <button type="button" class="btn-next">Question Suivante</button>
-            </section>
-            <!-- section questions du quiz -->
-
-            <!-- section résultats -->
-            <section class="quiz-section-finish">
-                <div>
-                    <div class="final-score">Score: 1 / 10</div>
-                    <div class="final-message">T'es mauvais !</div>
-                    <button type="button" class="btn-play-again">Jouer à nouveau</button>
-                </div>
-            </section>
-            <!-- section résultats -->
-
+        <!-- section start du quiz -->
+        <div class="quiz-section-start">
+            <div class="start-section">
+                <p>Découvrez si vous connaissez nos villes</p>
+                <img src="images/boussole.png" alt="drawing" class="image-boussole" />
+                <button class="btn-start">Commencer le Super Quiz</button>
+            </div>
         </div>
-    </main>
+        <!-- section start du quiz -->
+
+        <!-- section questions du quiz -->
+        <div class="quiz-section">
+            <div class="question">Quelle est la capitale de l'Europe ?</div>
+            <div class="button-choices">
+                <button class="btn-choice">Londres</button>
+                <button class="btn-choice">Paris</button>
+                <button class="btn-choice">Bruxelles</button>
+                <button class="btn-choice">Berlin</button>
+            </div>
+            <button class="btn-next">Question Suivante</button>
+        </div>
+        <!-- section questions du quiz -->
+
+    </div>
 
     <footer>
         <p>© 2025 Wild Code School</p>
