@@ -190,7 +190,7 @@ body {
 }
 
 .btn-play-again {
-  
+
   background-color: #c43109;
   color: white;
   font-weight: 500;
@@ -229,4 +229,109 @@ footer {
 }
 .incorrect {
   background: #dc5959;
+}
+/*Media query mobile*/
+@media screen and (max-width: 480px) {
+   
+  .navbar {
+    flex-direction: column; /* éléments en colonne */
+    height: auto; /* hauteur auto */
+    padding: 0.8rem;/* padding réduit sur les côtés */
+    gap: 0.5rem;/* espace réduit entre logo et liens */
+  }
+  
+  .logo-wcs {
+    width: 35px;
+  }
+  
+  .links-container {
+    width: 100%;/* prend toute la largeur */
+    display: flex;/* liens restent en lignes */
+    justify-content: center;/* liens centrés*/
+    gap: 0.5rem;/* espace entre liens*/
+  }
+  
+  .navlinks {
+    font-size: 0.75rem;
+    padding: 5px 10px;/* taille plus petite*/
+  }
+  
+  /* CONTAINER PRINCIPAL */
+  .container {
+    width: 98%;/* prend presque toute la largeur*/
+    margin: 15px auto;/* réduire la marge en haut et en bas*/
+    padding: 12px;
+  }
+  
+  .header-page h1 {
+    font-size: 0.85rem;
+    padding-bottom: 10px;/* moins espace sous titre*/
+  }
+  
+  /* SECTION START */
+  .start-section p {
+    font-size: 0.85rem;
+    padding-top: 10px; /*moins espace au dessus*/
+  }
+  
+  .image-boussole {
+    width: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .btn-start {
+    font-size: 0.8rem;
+    padding: 12px 15px;
+  }
+  
+  /* SECTION QUIZ */
+  .quiz-section {
+    width: 100%;/* toute la largeur dispo*/
+    padding: 15px;
+    margin: 15px auto 0;
+  }
+  
+  .question {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .btn-choice {
+    font-size: 0.8rem;
+    padding: 10px;
+    margin: 6px 0;
+  }
+  
+  .btn-next {
+    width: 100%;
+    max-width: 180px;
+    font-size: 0.8rem;
+    padding: 10px;
+    margin: 15px auto 0;
+    display: block;
+  }
+  
+  /* SECTION FINISH */
+  .quiz-section-finish {
+    width: 98%;
+    padding: 15px;
+  }
+  
+  .final-score,
+  .final-message {
+    font-size: 0.85rem;
+  }
+  
+  .btn-play-again {
+    width: 100%;
+    max-width: 180px;
+    font-size: 0.8rem;
+  }
+  
+  /* FOOTER */
+  footer {
+    font-size: 0.7rem;
+    padding: 10px 5px;
+  }
 }
