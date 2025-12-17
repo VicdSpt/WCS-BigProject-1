@@ -30,7 +30,7 @@ body {
 }
 
 .logo-wcs {
-  width: 50px;
+  width: 75px;
   height: auto;
 }
 
@@ -41,7 +41,7 @@ body {
   margin: 100px auto;
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid #c43109;
+  border: 1px solid #c48309;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -215,7 +215,7 @@ footer {
   font-weight: 600;
   padding: 15px 10px;
   line-height: 1.6;
-  border-top: 2px solid #c43109;
+  border-top: 2px solid #c48309;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -241,7 +241,7 @@ footer {
   }
   
   .logo-wcs {
-    width: 35px;
+    width: 80px;
   }
   
   .links-container {
