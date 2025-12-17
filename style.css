@@ -29,6 +29,72 @@ body {
   top: 0;
 }
 
+
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;  /* ← flex pour afficher les 3 barres */
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  background-color: #1e3a5f;
+  width: 200px;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+}
+
+.menu-link:hover {
+  background-color: #2d5487;
+}
+
+.menu-link:last-child {
+  border-bottom: none;
+  border-radius: 0 0 0 10px;
+}
+
 .logo-wcs {
   width: 75px;
   height: auto;
@@ -244,19 +310,24 @@ footer {
     width: 80px;
   }
   
-  .links-container {
-    width: 100%;/* prend toute la largeur */
-    display: flex;/* liens restent en lignes */
-    justify-content: center;/* liens centrés*/
-    gap: 0.5rem;/* espace entre liens*/
+.burger-menu {
+    position: absolute;  /* Positionne le burger en haut à droite */
+    top: 1rem;
+    right: 1rem;
   }
   
-  .navlinks {
-    font-size: 0.75rem;
-    padding: 5px 10px;/* taille plus petite*/
+  .mobile-menu {
+    top: 5rem;  /* Ajuste la position du menu déroulant */
+    width: 100%;  /* Menu prend toute la largeur sur mobile */
+    right: 0;
+    border-radius: 0;  /* Pas de coins arrondis sur mobile */
   }
   
-  /* CONTAINER PRINCIPAL */
+  .menu-link {
+    padding: 12px 15px;  /* Liens un peu plus petits */
+    font-size: 0.9rem;
+  }
+  
   .container {
     width: 98%;/* prend presque toute la largeur*/
     margin: 15px auto;/* réduire la marge en haut et en bas*/
@@ -267,8 +338,7 @@ footer {
     font-size: 0.85rem;
     padding-bottom: 10px;/* moins espace sous titre*/
   }
-  
-  /* SECTION START */
+
   .start-section p {
     font-size: 0.85rem;
     padding-top: 10px; /*moins espace au dessus*/
@@ -285,7 +355,6 @@ footer {
     padding: 12px 15px;
   }
   
-  /* SECTION QUIZ */
   .quiz-section {
     width: 100%;/* toute la largeur dispo*/
     padding: 15px;
@@ -312,7 +381,6 @@ footer {
     display: block;
   }
   
-  /* SECTION FINISH */
   .quiz-section-finish {
     width: 98%;
     padding: 15px;
@@ -329,7 +397,6 @@ footer {
     font-size: 0.8rem;
   }
   
-  /* FOOTER */
   footer {
     font-size: 0.7rem;
     padding: 10px 5px;

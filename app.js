@@ -198,3 +198,10 @@ const questionElement = document.querySelector(".question");// afficher question
 const answerBtns =document.querySelector(".button-choices");// conteneur des boutons de réponses, ajouter ou retirer
 
 // ---------------------------------------------------------------------------------------------------------
+// burger menu
+const burgerBtn = document.querySelector(".burger-menu");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+burgerBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+});
