@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-  background-color: rgb(218, 218, 218);
+  background-color: rgba(218, 218, 218, 0.9);
   width: 80%;
   max-width: 700px;
   margin: 100px auto;
@@ -190,7 +190,7 @@ body {
 }
 
 .btn-play-again {
-  /* display: block; */
+  
   background-color: #c43109;
   color: white;
   font-weight: 500;
