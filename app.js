@@ -192,10 +192,10 @@ let score = 0; //Score du joueur
 // DOM Elements vers HTML
 const startBtn = document.querySelector(".btn-start"); //Bouton démarrer le quiz
 const nextBtn = document.querySelector(".btn-next"); //Bouton question suivante
-const startSection = document.querySelector(".quiz-section-start");//Section de démarrage du quiz
-const quizSection = document.querySelector(".quiz-section");// affiche la section des question
-const questionElement = document.querySelector(".question");// afficher question et permet de la modifier
-const answerBtns =document.querySelector(".button-choices");// conteneur des boutons de réponses, ajouter ou retirer
+const startSection = document.querySelector(".quiz-section-start"); //Section de démarrage du quiz
+const quizSection = document.querySelector(".quiz-section"); // affiche la section des question
+const questionElement = document.querySelector(".question"); // afficher question et permet de la modifier
+const answerBtns = document.querySelector(".button-choices"); // conteneur des boutons de réponses, ajouter ou retirer
 
 // ---------------------------------------------------------------------------------------------------------
 // burger menu
@@ -205,3 +205,98 @@ const mobileMenu = document.querySelector(".mobile-menu");
 burgerBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
 });
+
+// ---------------------------------------------------------------------------------------------------------
+// function to start the quiz
+// fonction pour commencer le quiz en cliquant sur le btn-star
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+
+  startSection.style.display = "none";
+  quizSection.style.display = "block";
+
+  nextBtn.innerHTML = "Question Suivante";
+
+  // reset + start timer
+  // timeLeft = totalTime;
+  // updateProgressDisplay();
+  // startTimer();
+
+  showQuestion();
+}
+startBtn.addEventListener("click", startQuiz);
+
+// ---------------------------------------------------------------------------------------------------------
+
+// fonction pour afficher la question
+function showQuestion() {
+  resetQuestions();
+  let currentQuestion = myQuestions[currentQuestionIndex];
+  let questionNumber = currentQuestionIndex + 1;
+  questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
+
+  currentQuestion.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("btn-choice");
+    answerBtns.appendChild(button);
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer);
+  });
+}
+
+// function to select an answer
+function selectAnswer(event) {
+  const selectBtn = event.target;
+  const isCorrect = selectBtn.dataset.correct === "true";
+  if (isCorrect) {
+    selectBtn.classList.add("correct");
+    score++;
+  } else {
+    selectBtn.classList.add("incorrect");
+  }
+  Array.from(answerBtns.children).forEach((button) => {
+    if (button.dataset.correct === "true") {
+      button.classList.add("correct");
+    }
+    button.disabled = true;
+  });
+  nextBtn.style.display = "block";
+}
+
+// function for next button
+function goNextQuestion() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < myQuestions.length) {
+    showQuestion();
+  }
+}
+nextBtn.addEventListener("click", () => {
+  if (currentQuestionIndex < myQuestions.length) {
+    goNextQuestion();
+  } else {
+    startQuiz();
+  }
+});
+
+// function reset questions
+function resetQuestions() {
+  nextBtn.style.display = "none";
+  while (answerBtns.firstChild) {
+    answerBtns.removeChild(answerBtns.firstChild);
+  }
+}
+
+// function to display score
+function updateScoreDisplay() {
+  questionElement.innerHTML = `Score: ${score} / ${myQuestions.length}`;
+  if (isCorrect) {
+      updateScoreDisplay();
+      button.classList.add("correct");
+    } else {
+      button.classList.add("incorrect");
+    }
+}
