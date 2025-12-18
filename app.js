@@ -184,5 +184,24 @@ const myQuestions = [
     ],
   },
 ];
+// Variables pour gérer le quiz
+
+let currentQuestionIndex = 0; // Question position à afficher
+let score = 0; //Score du joueur
+
+// DOM Elements vers HTML
+const startBtn = document.querySelector(".btn-start"); //Bouton démarrer le quiz
+const nextBtn = document.querySelector(".btn-next"); //Bouton question suivante
+const startSection = document.querySelector(".quiz-section-start");//Section de démarrage du quiz
+const quizSection = document.querySelector(".quiz-section");// affiche la section des question
+const questionElement = document.querySelector(".question");// afficher question et permet de la modifier
+const answerBtns =document.querySelector(".button-choices");// conteneur des boutons de réponses, ajouter ou retirer
 
 // ---------------------------------------------------------------------------------------------------------
+// burger menu
+const burgerBtn = document.querySelector(".burger-menu");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+burgerBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+});

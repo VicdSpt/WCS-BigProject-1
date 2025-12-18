@@ -29,19 +29,85 @@ body {
   top: 0;
 }
 
+
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;  /* ← flex pour afficher les 3 barres */
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  background-color: #1e3a5f;
+  width: 200px;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+}
+
+.menu-link:hover {
+  background-color: #2d5487;
+}
+
+.menu-link:last-child {
+  border-bottom: none;
+  border-radius: 0 0 0 10px;
+}
+
 .logo-wcs {
-  width: 50px;
+  width: 75px;
   height: auto;
 }
 
 .container {
-  background-color: rgb(218, 218, 218);
+  background-color: rgba(218, 218, 218, 0.9);
   width: 80%;
   max-width: 700px;
   margin: 100px auto;
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid #c43109;
+  border: 1px solid #c48309;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -190,7 +256,7 @@ body {
 }
 
 .btn-play-again {
-  /* display: block; */
+
   background-color: #c43109;
   color: white;
   font-weight: 500;
@@ -215,7 +281,7 @@ footer {
   font-weight: 600;
   padding: 15px 10px;
   line-height: 1.6;
-  border-top: 2px solid #c43109;
+  border-top: 2px solid #c48309;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -229,4 +295,110 @@ footer {
 }
 .incorrect {
   background: #dc5959;
+}
+/*Media query mobile*/
+@media screen and (max-width: 480px) {
+   
+  .navbar {
+    flex-direction: column; /* éléments en colonne */
+    height: auto; /* hauteur auto */
+    padding: 0.8rem;/* padding réduit sur les côtés */
+    gap: 0.5rem;/* espace réduit entre logo et liens */
+  }
+  
+  .logo-wcs {
+    width: 80px;
+  }
+  
+.burger-menu {
+    position: absolute;  /* Positionne le burger en haut à droite */
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .mobile-menu {
+    top: 5rem;  /* Ajuste la position du menu déroulant */
+    width: 100%;  /* Menu prend toute la largeur sur mobile */
+    right: 0;
+    border-radius: 0;  /* Pas de coins arrondis sur mobile */
+  }
+  
+  .menu-link {
+    padding: 12px 15px;  /* Liens un peu plus petits */
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    width: 98%;/* prend presque toute la largeur*/
+    margin: 15px auto;/* réduire la marge en haut et en bas*/
+    padding: 12px;
+  }
+  
+  .header-page h1 {
+    font-size: 0.85rem;
+    padding-bottom: 10px;/* moins espace sous titre*/
+  }
+
+  .start-section p {
+    font-size: 0.85rem;
+    padding-top: 10px; /*moins espace au dessus*/
+  }
+  
+  .image-boussole {
+    width: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .btn-start {
+    font-size: 0.8rem;
+    padding: 12px 15px;
+  }
+  
+  .quiz-section {
+    width: 100%;/* toute la largeur dispo*/
+    padding: 15px;
+    margin: 15px auto 0;
+  }
+  
+  .question {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .btn-choice {
+    font-size: 0.8rem;
+    padding: 10px;
+    margin: 6px 0;
+  }
+  
+  .btn-next {
+    width: 100%;
+    max-width: 180px;
+    font-size: 0.8rem;
+    padding: 10px;
+    margin: 15px auto 0;
+    display: block;
+  }
+  
+  .quiz-section-finish {
+    width: 98%;
+    padding: 15px;
+  }
+  
+  .final-score,
+  .final-message {
+    font-size: 0.85rem;
+  }
+  
+  .btn-play-again {
+    width: 100%;
+    max-width: 180px;
+    font-size: 0.8rem;
+  }
+  
+  footer {
+    font-size: 0.7rem;
+    padding: 10px 5px;
+  }
 }
