@@ -196,6 +196,14 @@ body {
   margin-bottom: 15px;
   text-align: center;
 }
+
+.question-image {
+  display: block;  /* Pour que margin auto fonctionne */
+  max-width: 300px;  /* Largeur max ✅ */
+  width: 100%;  /* S'adapte aux petits écrans */
+  margin: 20px auto;  /* Centre l'image + espace autour */
+  border-radius: 10px;  /* Coins arrondis (augmente un peu) */
+}
 #score-display {
   text-align: center;
   font-size: 1rem;

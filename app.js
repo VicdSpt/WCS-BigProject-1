@@ -1,6 +1,7 @@
 const myQuestions = [
   {
     question: "Quel monument célèbre représente un petit garçon urinant ?",
+    image: "/images/bruxelles/Monuments-de-bruxelles-capitale-belgique-Manneken-Pis.jpg",
     answers: [
       { text: "Atomium", correct: false },
       { text: "Manneken-Pis", correct: true },
@@ -11,6 +12,7 @@ const myQuestions = [
   {
     question:
       "Quelle est la grande place centrale de Bruxelles, classée à l'UNESCO ?",
+    image: "images/bruxelles/Grand_Place_Bruselas_2.jpg",
     answers: [
       { text: "Place Royale", correct: false },
       { text: "Grand-Place", correct: true },
@@ -20,6 +22,7 @@ const myQuestions = [
   },
   {
     question: "Quelle est la hauteur de l'Atomium ?",
+    image: "images/bruxelles/atomium.jpg",
     answers: [
       { text: "72 m", correct: false },
       { text: "102 m", correct: true },
@@ -30,6 +33,7 @@ const myQuestions = [
   {
     question:
       "Le bar Delirium Café à Bruxelles est célèbre pour son incroyable sélection de bières. Combien de bières différentes peut-on y trouver ?",
+      image: "images/bruxelles/délicafe.jpg",
     answers: [
       { text: "200", correct: false },
       { text: "500", correct: false },
@@ -39,6 +43,7 @@ const myQuestions = [
   },
   {
     question: "Quelle est la forme typique de la gaufre de Bruxelles ?",
+    image: "images/bruxelles/gauffre.jpg",
     answers: [
       { text: "Ronde et épaisse", correct: false },
       { text: "Rectangulaire et légère", correct: true },
@@ -235,6 +240,9 @@ function showQuestion() {
   let currentQuestion = myQuestions[currentQuestionIndex];
   let questionNumber = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
+  
+  const questionImage = document.querySelector(".question-image");
+  questionImage.src = currentQuestion.image;
 
   currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
@@ -294,9 +302,9 @@ function resetQuestions() {
 function updateScoreDisplay() {
   questionElement.innerHTML = `Score: ${score} / ${myQuestions.length}`;
   if (isCorrect) {
-      updateScoreDisplay();
-      button.classList.add("correct");
-    } else {
-      button.classList.add("incorrect");
-    }
+    updateScoreDisplay();
+    button.classList.add("correct");
+  } else {
+    button.classList.add("incorrect");
+  }
 }
