@@ -29,12 +29,11 @@ body {
   top: 0;
 }
 
-
 .burger-menu {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;  /* ← flex pour afficher les 3 barres */
+  display: flex; /* ← flex pour afficher les 3 barres */
   flex-direction: column;
   gap: 5px;
   padding: 5px;
@@ -195,7 +194,55 @@ body {
   color: black;
   margin-bottom: 15px;
   text-align: center;
+  flex: 1;
 }
+
+.question-timer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* timer */
+.timer-container svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.timer-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0; /* Prevents timer from shrinking */
+}
+
+.circle-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 8;
+}
+
+.circle-progress {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease, stroke 0.3s ease;
+}
+
+.show-timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* timer */
 
 .btn-choice {
   background: #e8e8e8;
@@ -272,6 +319,16 @@ body {
   transform: scale(1.08);
 }
 
+#score-display {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+}
+
 /* Footer qui reste en bas */
 footer {
   background-color: rgba(30, 58, 95, 0.9);
@@ -297,80 +354,79 @@ footer {
 }
 /*Media query mobile*/
 @media screen and (max-width: 480px) {
-   
   .navbar {
     flex-direction: column; /* éléments en colonne */
     height: auto; /* hauteur auto */
-    padding: 0.8rem;/* padding réduit sur les côtés */
-    gap: 0.5rem;/* espace réduit entre logo et liens */
+    padding: 0.8rem; /* padding réduit sur les côtés */
+    gap: 0.5rem; /* espace réduit entre logo et liens */
   }
-  
+
   .logo-wcs {
     width: 80px;
   }
-  
-.burger-menu {
-    position: absolute;  /* Positionne le burger en haut à droite */
+
+  .burger-menu {
+    position: absolute; /* Positionne le burger en haut à droite */
     top: 1rem;
     right: 1rem;
   }
-  
+
   .mobile-menu {
-    top: 5rem;  /* Ajuste la position du menu déroulant */
-    width: 100%;  /* Menu prend toute la largeur sur mobile */
+    top: 5rem; /* Ajuste la position du menu déroulant */
+    width: 100%; /* Menu prend toute la largeur sur mobile */
     right: 0;
-    border-radius: 0;  /* Pas de coins arrondis sur mobile */
+    border-radius: 0; /* Pas de coins arrondis sur mobile */
   }
-  
+
   .menu-link {
-    padding: 12px 15px;  /* Liens un peu plus petits */
+    padding: 12px 15px; /* Liens un peu plus petits */
     font-size: 0.9rem;
   }
-  
+
   .container {
-    width: 98%;/* prend presque toute la largeur*/
-    margin: 15px auto;/* réduire la marge en haut et en bas*/
+    width: 98%; /* prend presque toute la largeur*/
+    margin: 15px auto; /* réduire la marge en haut et en bas*/
     padding: 12px;
   }
-  
+
   .header-page h1 {
     font-size: 0.85rem;
-    padding-bottom: 10px;/* moins espace sous titre*/
+    padding-bottom: 10px; /* moins espace sous titre*/
   }
 
   .start-section p {
     font-size: 0.85rem;
     padding-top: 10px; /*moins espace au dessus*/
   }
-  
+
   .image-boussole {
     width: 100px;
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  
+
   .btn-start {
     font-size: 0.8rem;
     padding: 12px 15px;
   }
-  
+
   .quiz-section {
-    width: 100%;/* toute la largeur dispo*/
+    width: 100%; /* toute la largeur dispo*/
     padding: 15px;
     margin: 15px auto 0;
   }
-  
+
   .question {
     font-size: 0.8rem;
     margin-bottom: 12px;
   }
-  
+
   .btn-choice {
     font-size: 0.8rem;
     padding: 10px;
     margin: 6px 0;
   }
-  
+
   .btn-next {
     width: 100%;
     max-width: 180px;
@@ -379,23 +435,23 @@ footer {
     margin: 15px auto 0;
     display: block;
   }
-  
+
   .quiz-section-finish {
     width: 98%;
     padding: 15px;
   }
-  
+
   .final-score,
   .final-message {
     font-size: 0.85rem;
   }
-  
+
   .btn-play-again {
     width: 100%;
     max-width: 180px;
     font-size: 0.8rem;
   }
-  
+
   footer {
     font-size: 0.7rem;
     padding: 10px 5px;
