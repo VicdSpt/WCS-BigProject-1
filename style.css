@@ -316,15 +316,17 @@ footer {
   }
   
   .mobile-menu {
-    top: 5rem;  /* Ajuste la position du menu déroulant */
-    width: 100%;  /* Menu prend toute la largeur sur mobile */
+    top: 4rem;  /* Ajuste la position du menu déroulant */
+    width: auto;  /* largeur automatique */
     right: 0;
-    border-radius: 0;  /* Pas de coins arrondis sur mobile */
+    min-width: 150px;/*largeur minimum*/
+    border-radius: 0 0 0 10px;  /* coin arrondi à gauche */
   }
   
   .menu-link {
     padding: 12px 15px;  /* Liens un peu plus petits */
     font-size: 0.9rem;
+    
   }
   
   .container {
