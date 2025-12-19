@@ -34,7 +34,8 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;  /* ← flex pour afficher les 3 barres */
+  display: flex;
+  /* ← flex pour afficher les 3 barres */
   flex-direction: column;
   gap: 5px;
   padding: 5px;
@@ -52,6 +53,7 @@ body {
 .burger-menu.active span:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
 }
+
 .burger-menu.active span:nth-child(2) {
   opacity: 0;
 }
@@ -156,6 +158,7 @@ body {
   padding: 8px 15px;
   border-radius: 15px;
 }
+
 .navlinks:hover {
   background-color: #fff;
   color: black;
@@ -173,6 +176,7 @@ body {
   cursor: pointer;
   transition: transform 0.2s;
 }
+
 .btn-start:hover {
   background-color: #2d5487;
   color: #fff;
@@ -180,7 +184,8 @@ body {
 }
 
 .quiz-section {
-  display: none; /* Hide initially */
+  display: none;
+  /* Hide initially */
   background-color: rgb(242, 242, 242);
   width: 90%;
   max-width: 600px;
@@ -198,12 +203,16 @@ body {
 }
 
 .question-image {
-  display: block;  /* Pour que margin auto fonctionne */
-  max-width: 300px;  /* Largeur max ✅ */
-  width: 100%;  /* S'adapte aux petits écrans */
-  margin: 20px auto;  /* Centre l'image + espace autour */
-  border-radius: 10px;  /* Coins arrondis (augmente un peu) */
+  display: block;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+  object-fit: contain;
+
+
 }
+
 #score-display {
   text-align: center;
   font-size: 1rem;
@@ -227,10 +236,12 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
+
 .btn-choice:hover:not([disabled]) {
   background: #1e3a5f;
   color: white;
 }
+
 .btn-choice:disabled {
   cursor: no-drop;
 }
@@ -247,6 +258,7 @@ body {
   cursor: pointer;
   transition: transform 0.2s;
 }
+
 .btn-next:hover {
   background-color: #2d5487;
   color: #fff;
@@ -284,6 +296,7 @@ body {
   cursor: pointer;
   transition: transform 0.2s;
 }
+
 .btn-play-again:hover {
   background-color: #c43109;
   transform: scale(1.08);
@@ -309,87 +322,109 @@ footer {
 .correct {
   background: #71de67;
 }
+
 .incorrect {
   background: #dc5959;
 }
+
 /*Media query mobile*/
 @media screen and (max-width: 480px) {
-   
+
   .navbar {
-    flex-direction: column; /* éléments en colonne */
-    height: auto; /* hauteur auto */
-    padding: 0.8rem;/* padding réduit sur les côtés */
-    gap: 0.5rem;/* espace réduit entre logo et liens */
+    flex-direction: column;
+    /* éléments en colonne */
+    height: auto;
+    /* hauteur auto */
+    padding: 0.8rem;
+    /* padding réduit sur les côtés */
+    gap: 0.5rem;
+    /* espace réduit entre logo et liens */
   }
-  
+
   .logo-wcs {
     width: 80px;
   }
-  
-.burger-menu {
-    position: absolute;  /* Positionne le burger en haut à droite */
+
+  .burger-menu {
+    position: absolute;
+    /* Positionne le burger en haut à droite */
     top: 1rem;
     right: 1rem;
   }
-  
+
   .mobile-menu {
-    top: 4rem;  /* Ajuste la position du menu déroulant */
-    width: auto;  /* largeur automatique */
+    top: 4rem;
+    /* Ajuste la position du menu déroulant */
+    width: auto;
+    /* largeur automatique */
     right: 0;
-    min-width: 150px;/*largeur minimum*/
-    border-radius: 0 0 0 10px;  /* coin arrondi à gauche */
+    min-width: 150px;
+    /*largeur minimum*/
+    border-radius: 0 0 0 10px;
+    /* coin arrondi à gauche */
   }
-  
+
   .menu-link {
-    padding: 12px 15px;  /* Liens un peu plus petits */
+    padding: 12px 15px;
+    /* Liens un peu plus petits */
     font-size: 0.9rem;
-    
+
   }
-  
+
   .container {
-    width: 98%;/* prend presque toute la largeur*/
-    margin: 15px auto;/* réduire la marge en haut et en bas*/
+    width: 98%;
+    /* prend presque toute la largeur*/
+    margin: 15px auto;
+    /* réduire la marge en haut et en bas*/
     padding: 12px;
   }
-  
+
   .header-page h1 {
     font-size: 0.85rem;
-    padding-bottom: 10px;/* moins espace sous titre*/
+    padding-bottom: 10px;
+    /* moins espace sous titre*/
   }
 
   .start-section p {
     font-size: 0.85rem;
-    padding-top: 10px; /*moins espace au dessus*/
+    padding-top: 10px;
+    /*moins espace au dessus*/
   }
-  
+
   .image-boussole {
     width: 100px;
     padding-top: 15px;
     padding-bottom: 15px;
   }
-  
+
   .btn-start {
     font-size: 0.8rem;
     padding: 12px 15px;
   }
-  
+
   .quiz-section {
-    width: 100%;/* toute la largeur dispo*/
+    width: 100%;
+    /* toute la largeur dispo*/
     padding: 15px;
     margin: 15px auto 0;
   }
-  
+
   .question {
     font-size: 0.8rem;
     margin-bottom: 12px;
   }
-  
+
+  .question-image {
+    height: 200px;
+  }
+
+
   .btn-choice {
     font-size: 0.8rem;
     padding: 10px;
     margin: 6px 0;
   }
-  
+
   .btn-next {
     width: 100%;
     max-width: 180px;
@@ -398,23 +433,23 @@ footer {
     margin: 15px auto 0;
     display: block;
   }
-  
+
   .quiz-section-finish {
     width: 98%;
     padding: 15px;
   }
-  
+
   .final-score,
   .final-message {
     font-size: 0.85rem;
   }
-  
+
   .btn-play-again {
     width: 100%;
     max-width: 180px;
     font-size: 0.8rem;
   }
-  
+
   footer {
     font-size: 0.7rem;
     padding: 10px 5px;
