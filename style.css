@@ -196,6 +196,15 @@ body {
   margin-bottom: 15px;
   text-align: center;
 }
+#score-display {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+}
 
 .btn-choice {
   background: #e8e8e8;
