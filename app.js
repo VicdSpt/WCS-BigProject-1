@@ -1,7 +1,7 @@
 const myQuestions = [
   {
     question: "Quel monument célèbre représente un petit garçon urinant ?",
-    image: "/images/bruxelles/Monuments-de-bruxelles-capitale-belgique-Manneken-Pis.jpg",
+    image: "images/bruxelles/Monuments-de-bruxelles-capitale-belgique-Manneken-Pis.jpg",
     answers: [
       { text: "Atomium", correct: false },
       { text: "Manneken-Pis", correct: true },
@@ -53,6 +53,7 @@ const myQuestions = [
   },
   {
     question: "Quel est le principal port de Toulon ?",
+    image: "images/Toulon/toulon1.webp"
     answers: [
       { text: "Port de Nice", correct: false },
       { text: "La Rade de Toulon", correct: true },
@@ -62,6 +63,7 @@ const myQuestions = [
   },
   {
     question: "Quel sport est particulièrement populaire à Toulon ?",
+    image: "images/Toulon/toulon-3.jpg"
     answers: [
       { text: "Rugby", correct: true },
       { text: "Football", correct: false },
