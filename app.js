@@ -53,7 +53,7 @@ const myQuestions = [
   },
   {
     question: "Quel est le principal port de Toulon ?",
-    image: "images/Toulon/toulon1.webp"
+    image: "images/Toulon/toulon1.webp",
     answers: [
       { text: "Port de Nice", correct: false },
       { text: "La Rade de Toulon", correct: true },
@@ -63,7 +63,7 @@ const myQuestions = [
   },
   {
     question: "Quel sport est particulièrement populaire à Toulon ?",
-    image: "images/Toulon/toulon-3.jpg"
+    image: "images/Toulon/toulon-3.jpg",
     answers: [
       { text: "Rugby", correct: true },
       { text: "Football", correct: false },
@@ -73,6 +73,7 @@ const myQuestions = [
   },
   {
     question: "Toulon est célèbre pour quel type de paysage naturel ?",
+    image: "images/Toulon/toulon-2.webp",
     answers: [
       { text: "Plages et rade", correct: true },
       { text: "Montagnes enneigées", correct: false },
@@ -82,6 +83,7 @@ const myQuestions = [
   },
   {
     question: "Quel événement militaire est associé à Toulon ?",
+    image: "images/Toulon/cdg-1.jpg",
     answers: [
       { text: "La base navale de la Marine nationale", correct: true },
       { text: "Les Jeux Olympiques", correct: false },
@@ -92,6 +94,7 @@ const myQuestions = [
   {
     question:
       "Quel est le monument emblématique de Toulon surplombant la ville ?",
+      image: "images/Toulon/26352604.jpg",
     answers: [
       { text: "La Tour Eiffel", correct: false },
       { text: "Le Mont Faron", correct: true },
