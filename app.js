@@ -105,6 +105,7 @@ const myQuestions = [
   {
     question:
       "Le premier métro automatique sans chauffeur a été inauguré à Lille",
+      image: "images/Lille/metro.jpg",
     answers: [
       { text: "Vrai", correct: true },
       { text: "Faux", correct: false },
@@ -112,6 +113,7 @@ const myQuestions = [
   },
   {
     question: "Lequel de ces présidents était originaire de Lille ?",
+    image: "images/Lille/président.jpg",
     answers: [
       { text: "Georges Pompidou", correct: false },
       { text: "François Mitterand", correct: false },
@@ -121,6 +123,7 @@ const myQuestions = [
   },
   {
     question: "Quelle est la boisson emblématique de Lille ?",
+    image: "images/Lille/chti.jpg",
     answers: [
       { text: "Le Vin rouge", correct: false },
       { text: "La Bière", correct: true },
@@ -130,6 +133,7 @@ const myQuestions = [
   },
   {
     question: "La cathédrale de Lille porte le nom de :",
+    image: "images/Lille/la treille.jpg",
     answers: [
       { text: "Notre Dame de la Treille", correct: true },
       { text: "Notre Dame de la Vigne", correct: false },
@@ -139,6 +143,7 @@ const myQuestions = [
   },
   {
     question: "Lille est surnommé la Capitale des Flandres",
+    image: "images/Lille/lille capitale.jpg",
     answers: [
       { text: "Vrai", correct: true },
       { text: "Faux", correct: false },
@@ -146,6 +151,7 @@ const myQuestions = [
   },
   {
     question: "Quelle célèbre marque de gâteaux est originaire de Nantes ?",
+    image: "images/Nantes/nantesq1.jpg",
     answers: [
       { text: "Bonne Maman", correct: false },
       { text: "LU", correct: true },
@@ -156,6 +162,7 @@ const myQuestions = [
   {
     question:
       "Quel lieu emblématique occupait le dernier étage de la Tour Bretagne (144m de haut) avant sa fermeture ?",
+      image: "images/Nantes/nantesq2.jpg",
     answers: [
       { text: "Une salle de sport", correct: false },
       { text: "Un bar appelé Le Nid", correct: true },
@@ -166,7 +173,8 @@ const myQuestions = [
   {
     question:
       "Quel animal géant et mécanique est devenu l'une des attractions les plus célèbres des Machines de l'Île ?",
-    answers: [
+      image: "images/Nantes/nantesq3.jpg",
+      answers: [
       { text: "Le tigre steampunk", correct: false },
       { text: "Le dragon volant", correct: false },
       { text: "Le Grand Éléphant", correct: true },
@@ -176,6 +184,7 @@ const myQuestions = [
   {
     question:
       "Quel fleuve traverse la ville de Nantes avant de se jeter dans l'océan Atlantique ?",
+      image: "images/Nantes/nantesq4.jpg",
     answers: [
       { text: "La Seine", correct: false },
       { text: "La Loire", correct: true },
@@ -186,6 +195,7 @@ const myQuestions = [
   {
     question:
       "Quel vin blanc, produit autour de Nantes et reconnu pour accompagner les fruits de mer, est le plus célèbre de la région ?",
+      image: "images/Nantes/nantesq5.jpg",
     answers: [
       { text: "Sancerre", correct: false },
       { text: "Bordeaux blanc", correct: false },
