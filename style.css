@@ -328,7 +328,8 @@ footer {
 }
 
 /*Media query mobile*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 375px) {
+
 
   .navbar {
     flex-direction: column;
@@ -374,10 +375,11 @@ footer {
   .container {
     width: 98%;
     /* prend presque toute la largeur*/
-    margin: 15px auto;
+    margin: 10px auto;
     /* réduire la marge en haut et en bas*/
-    padding: 12px;
+    padding: 10px;
   }
+
 
   .header-page h1 {
     font-size: 0.85rem;
@@ -403,10 +405,10 @@ footer {
   }
 
   .quiz-section {
-    width: 100%;
+    width: 98%;
     /* toute la largeur dispo*/
-    padding: 15px;
-    margin: 15px auto 0;
+    padding: 10px;
+    margin: 10px auto 0;
   }
 
   .question {
@@ -415,14 +417,15 @@ footer {
   }
 
   .question-image {
-    height: 200px;
+    height: 150px;
+    margin: 10px auto;
   }
 
 
   .btn-choice {
     font-size: 0.8rem;
-    padding: 10px;
-    margin: 6px 0;
+    padding: 8px;
+    margin: 4px 0;
   }
 
   .btn-next {
@@ -431,6 +434,7 @@ footer {
     font-size: 0.8rem;
     padding: 10px;
     margin: 15px auto 0;
+    margin-bottom: 15px;
     display: block;
   }
 
@@ -451,7 +455,9 @@ footer {
   }
 
   footer {
-    font-size: 0.7rem;
-    padding: 10px 5px;
+    position: relative;
+    font-size: 0.65rem;
+    padding: 8px 5px;
+    
   }
 }
