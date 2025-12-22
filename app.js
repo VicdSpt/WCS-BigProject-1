@@ -1,6 +1,7 @@
 const myQuestions = [
   {
     question: "Quel monument célèbre représente un petit garçon urinant ?",
+    image: "images/bruxelles/Monuments-de-bruxelles-capitale-belgique-Manneken-Pis.jpg",
     answers: [
       { text: "Atomium", correct: false },
       { text: "Manneken-Pis", correct: true },
@@ -11,6 +12,7 @@ const myQuestions = [
   {
     question:
       "Quelle est la grande place centrale de Bruxelles, classée à l'UNESCO ?",
+    image: "images/bruxelles/Grand_Place_Bruselas_2.jpg",
     answers: [
       { text: "Place Royale", correct: false },
       { text: "Grand-Place", correct: true },
@@ -20,6 +22,7 @@ const myQuestions = [
   },
   {
     question: "Quelle est la hauteur de l'Atomium ?",
+    image: "images/bruxelles/atomium.jpg",
     answers: [
       { text: "72 m", correct: false },
       { text: "102 m", correct: true },
@@ -30,6 +33,7 @@ const myQuestions = [
   {
     question:
       "Le bar Delirium Café à Bruxelles est célèbre pour son incroyable sélection de bières. Combien de bières différentes peut-on y trouver ?",
+      image: "images/bruxelles/délicafe.jpg",
     answers: [
       { text: "200", correct: false },
       { text: "500", correct: false },
@@ -39,6 +43,7 @@ const myQuestions = [
   },
   {
     question: "Quelle est la forme typique de la gaufre de Bruxelles ?",
+    image: "images/bruxelles/gauffre.jpg",
     answers: [
       { text: "Ronde et épaisse", correct: false },
       { text: "Rectangulaire et légère", correct: true },
@@ -48,6 +53,7 @@ const myQuestions = [
   },
   {
     question: "Quel est le principal port de Toulon ?",
+    image: "images/Toulon/toulon1.webp",
     answers: [
       { text: "Port de Nice", correct: false },
       { text: "La Rade de Toulon", correct: true },
@@ -57,6 +63,7 @@ const myQuestions = [
   },
   {
     question: "Quel sport est particulièrement populaire à Toulon ?",
+    image: "images/Toulon/toulon-3.jpg",
     answers: [
       { text: "Rugby", correct: true },
       { text: "Football", correct: false },
@@ -66,6 +73,7 @@ const myQuestions = [
   },
   {
     question: "Toulon est célèbre pour quel type de paysage naturel ?",
+    image: "images/Toulon/toulon-2.webp",
     answers: [
       { text: "Plages et rade", correct: true },
       { text: "Montagnes enneigées", correct: false },
@@ -75,6 +83,7 @@ const myQuestions = [
   },
   {
     question: "Quel événement militaire est associé à Toulon ?",
+    image: "images/Toulon/cdg-1.jpg",
     answers: [
       { text: "La base navale de la Marine nationale", correct: true },
       { text: "Les Jeux Olympiques", correct: false },
@@ -85,6 +94,7 @@ const myQuestions = [
   {
     question:
       "Quel est le monument emblématique de Toulon surplombant la ville ?",
+      image: "images/Toulon/26352604.jpg",
     answers: [
       { text: "La Tour Eiffel", correct: false },
       { text: "Le Mont Faron", correct: true },
@@ -95,6 +105,7 @@ const myQuestions = [
   {
     question:
       "Le premier métro automatique sans chauffeur a été inauguré à Lille",
+      image: "images/Lille/metro.jpg",
     answers: [
       { text: "Vrai", correct: true },
       { text: "Faux", correct: false },
@@ -102,6 +113,7 @@ const myQuestions = [
   },
   {
     question: "Lequel de ces présidents était originaire de Lille ?",
+    image: "images/Lille/président.jpg",
     answers: [
       { text: "Georges Pompidou", correct: false },
       { text: "François Mitterand", correct: false },
@@ -111,6 +123,7 @@ const myQuestions = [
   },
   {
     question: "Quelle est la boisson emblématique de Lille ?",
+    image: "images/Lille/chti.jpg",
     answers: [
       { text: "Le Vin rouge", correct: false },
       { text: "La Bière", correct: true },
@@ -120,6 +133,7 @@ const myQuestions = [
   },
   {
     question: "La cathédrale de Lille porte le nom de :",
+    image: "images/Lille/la treille.jpg",
     answers: [
       { text: "Notre Dame de la Treille", correct: true },
       { text: "Notre Dame de la Vigne", correct: false },
@@ -129,6 +143,7 @@ const myQuestions = [
   },
   {
     question: "Lille est surnommé la Capitale des Flandres",
+    image: "images/Lille/lille capitale.jpg",
     answers: [
       { text: "Vrai", correct: true },
       { text: "Faux", correct: false },
@@ -136,6 +151,7 @@ const myQuestions = [
   },
   {
     question: "Quelle célèbre marque de gâteaux est originaire de Nantes ?",
+    image: "images/Nantes/nantesq1.jpg",
     answers: [
       { text: "Bonne Maman", correct: false },
       { text: "LU", correct: true },
@@ -146,6 +162,7 @@ const myQuestions = [
   {
     question:
       "Quel lieu emblématique occupait le dernier étage de la Tour Bretagne (144m de haut) avant sa fermeture ?",
+      image: "images/Nantes/nantesq2.jpg",
     answers: [
       { text: "Une salle de sport", correct: false },
       { text: "Un bar appelé Le Nid", correct: true },
@@ -156,7 +173,8 @@ const myQuestions = [
   {
     question:
       "Quel animal géant et mécanique est devenu l'une des attractions les plus célèbres des Machines de l'Île ?",
-    answers: [
+      image: "images/Nantes/nantesq3.jpg",
+      answers: [
       { text: "Le tigre steampunk", correct: false },
       { text: "Le dragon volant", correct: false },
       { text: "Le Grand Éléphant", correct: true },
@@ -166,6 +184,7 @@ const myQuestions = [
   {
     question:
       "Quel fleuve traverse la ville de Nantes avant de se jeter dans l'océan Atlantique ?",
+      image: "images/Nantes/nantesq4.jpg",
     answers: [
       { text: "La Seine", correct: false },
       { text: "La Loire", correct: true },
@@ -176,6 +195,7 @@ const myQuestions = [
   {
     question:
       "Quel vin blanc, produit autour de Nantes et reconnu pour accompagner les fruits de mer, est le plus célèbre de la région ?",
+      image: "images/Nantes/nantesq5.jpg",
     answers: [
       { text: "Sancerre", correct: false },
       { text: "Bordeaux blanc", correct: false },
@@ -302,6 +322,9 @@ function showQuestion() {
   let currentQuestion = myQuestions[currentQuestionIndex];
   let questionNumber = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
+  
+  const questionImage = document.querySelector(".question-image");
+  questionImage.src = currentQuestion.image;
 
   currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
@@ -367,6 +390,14 @@ nextBtn.addEventListener("click", () => {
 
 // function to display score
 function updateScoreDisplay() {
+  questionElement.innerHTML = `Score: ${score} / ${myQuestions.length}`;
+  if (isCorrect) {
+    updateScoreDisplay();
+    button.classList.add("correct");
+  } else {
+    button.classList.add("incorrect");
+  }
+}
   const scoreDisplay = document.getElementById('score-display');
   if (scoreDisplay) {
     scoreDisplay.innerHTML = `Score: ${score} / ${myQuestions.length}`;
