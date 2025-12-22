@@ -1,7 +1,8 @@
 const myQuestions = [
   {
     question: "Quel monument célèbre représente un petit garçon urinant ?",
-    image: "images/bruxelles/Monuments-de-bruxelles-capitale-belgique-Manneken-Pis.jpg",
+    image:
+      "images/bruxelles/Monuments-de-bruxelles-capitale-belgique-Manneken-Pis.jpg",
     answers: [
       { text: "Atomium", correct: false },
       { text: "Manneken-Pis", correct: true },
@@ -33,7 +34,7 @@ const myQuestions = [
   {
     question:
       "Le bar Delirium Café à Bruxelles est célèbre pour son incroyable sélection de bières. Combien de bières différentes peut-on y trouver ?",
-      image: "images/bruxelles/délicafe.jpg",
+    image: "images/bruxelles/délicafe.jpg",
     answers: [
       { text: "200", correct: false },
       { text: "500", correct: false },
@@ -94,7 +95,7 @@ const myQuestions = [
   {
     question:
       "Quel est le monument emblématique de Toulon surplombant la ville ?",
-      image: "images/Toulon/26352604.jpg",
+    image: "images/Toulon/26352604.jpg",
     answers: [
       { text: "La Tour Eiffel", correct: false },
       { text: "Le Mont Faron", correct: true },
@@ -105,7 +106,7 @@ const myQuestions = [
   {
     question:
       "Le premier métro automatique sans chauffeur a été inauguré à Lille",
-      image: "images/Lille/metro.jpg",
+    image: "images/Lille/metro.jpg",
     answers: [
       { text: "Vrai", correct: true },
       { text: "Faux", correct: false },
@@ -162,7 +163,7 @@ const myQuestions = [
   {
     question:
       "Quel lieu emblématique occupait le dernier étage de la Tour Bretagne (144m de haut) avant sa fermeture ?",
-      image: "images/Nantes/nantesq2.jpg",
+    image: "images/Nantes/nantesq2.jpg",
     answers: [
       { text: "Une salle de sport", correct: false },
       { text: "Un bar appelé Le Nid", correct: true },
@@ -173,8 +174,8 @@ const myQuestions = [
   {
     question:
       "Quel animal géant et mécanique est devenu l'une des attractions les plus célèbres des Machines de l'Île ?",
-      image: "images/Nantes/nantesq3.jpg",
-      answers: [
+    image: "images/Nantes/nantesq3.jpg",
+    answers: [
       { text: "Le tigre steampunk", correct: false },
       { text: "Le dragon volant", correct: false },
       { text: "Le Grand Éléphant", correct: true },
@@ -184,7 +185,7 @@ const myQuestions = [
   {
     question:
       "Quel fleuve traverse la ville de Nantes avant de se jeter dans l'océan Atlantique ?",
-      image: "images/Nantes/nantesq4.jpg",
+    image: "images/Nantes/nantesq4.jpg",
     answers: [
       { text: "La Seine", correct: false },
       { text: "La Loire", correct: true },
@@ -195,7 +196,7 @@ const myQuestions = [
   {
     question:
       "Quel vin blanc, produit autour de Nantes et reconnu pour accompagner les fruits de mer, est le plus célèbre de la région ?",
-      image: "images/Nantes/nantesq5.jpg",
+    image: "images/Nantes/nantesq5.jpg",
     answers: [
       { text: "Sancerre", correct: false },
       { text: "Bordeaux blanc", correct: false },
@@ -322,7 +323,7 @@ function showQuestion() {
   let currentQuestion = myQuestions[currentQuestionIndex];
   let questionNumber = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
-  
+
   const questionImage = document.querySelector(".question-image");
   questionImage.src = currentQuestion.image;
 
@@ -366,7 +367,7 @@ function selectAnswer(event) {
   });
   nextBtn.style.display = "block";
 
-  clearInterval(timerInterval)
+  clearInterval(timerInterval);
 }
 
 // function for next button
@@ -387,19 +388,10 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-
 // function to display score
 function updateScoreDisplay() {
-  questionElement.innerHTML = `Score: ${score} / ${myQuestions.length}`;
-  if (isCorrect) {
-    updateScoreDisplay();
-    button.classList.add("correct");
-  } else {
-    button.classList.add("incorrect");
-  }
-}
-  const scoreDisplay = document.getElementById('score-display');
+  const scoreDisplay = document.getElementById("score-display");
   if (scoreDisplay) {
     scoreDisplay.innerHTML = `Score: ${score} / ${myQuestions.length}`;
-  }}
-
+  }
+}
