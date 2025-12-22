@@ -29,7 +29,6 @@ body {
   top: 0;
 }
 
-
 .burger-menu {
   background: none;
   border: none;
@@ -200,6 +199,15 @@ body {
   color: black;
   margin-bottom: 15px;
   text-align: center;
+  flex: 1;
+}
+
+.question-timer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
 .question-image {
@@ -300,6 +308,16 @@ body {
 .btn-play-again:hover {
   background-color: #c43109;
   transform: scale(1.08);
+}
+
+#score-display {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
 }
 
 /* Footer qui reste en bas */

@@ -204,11 +204,8 @@ const myQuestions = [
     ],
   },
 ];
+
 // Variables pour gérer le quiz
-
-let currentQuestionIndex = 0; // Question position à afficher
-let score = 0; //Score du joueur
-
 // DOM Elements vers HTML
 const startBtn = document.querySelector(".btn-start"); //Bouton démarrer le quiz
 const nextBtn = document.querySelector(".btn-next"); //Bouton question suivante
@@ -216,6 +213,34 @@ const startSection = document.querySelector(".quiz-section-start"); //Section de
 const quizSection = document.querySelector(".quiz-section"); // affiche la section des question
 const questionElement = document.querySelector(".question"); // afficher question et permet de la modifier
 const answerBtns = document.querySelector(".button-choices"); // conteneur des boutons de réponses, ajouter ou retirer
+const displayTime = document.getElementById("showTimer");
+const progressCircle = document.getElementById("progressCircle");
+
+let currentQuestionIndex = 0; // Question position à afficher
+let score = 0; //Score du joueur
+
+let totalTime = 30;
+let timeLeft = totalTime;
+let timerInterval;
+
+// this will show the circle moving as the time pass
+const circleRadius = 50;
+const circumference = 2 * Math.PI * circleRadius;
+
+progressCircle.style.strokeDasharray = circumference;
+progressCircle.style.strokeDashoffset = 0;
+
+// function to show colors on the timer
+function showTimerColors() {
+  const percentage = (timeLeft / totalTime) * 100;
+  if (percentage > 50) {
+    return "#4CAF50";
+  } else if (percentage > 25) {
+    return "#FFC107";
+  } else {
+    return "#f44336";
+  }
+}
 
 // ---------------------------------------------------------------------------------------------------------
 // burger menu
@@ -227,6 +252,46 @@ burgerBtn.addEventListener("click", () => {
 });
 
 // ---------------------------------------------------------------------------------------------------------
+// function to update screen and the progress
+function updateProgressDisplay() {
+  displayTime.textContent = timeLeft;
+
+  const percentage = timeLeft / totalTime;
+  const offset = circumference * (1 - percentage);
+
+  progressCircle.style.strokeDashoffset = offset;
+  progressCircle.style.stroke = showTimerColors();
+}
+
+// timer will start
+function startTimer() {
+  clearInterval(timerInterval);
+  timerInterval = setInterval(function () {
+    timeLeft = timeLeft - 1;
+    updateProgressDisplay();
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      displayTime.textContent = "0";
+
+      setTimeout(function () {
+        displayTime.textContent = "Done";
+        displayTime.classList.add = "Done";
+      });
+    }
+  }, 1000);
+}
+
+// function to reset timer
+function resetTimer() {
+  clearInterval(timerInterval);
+  timeLeft = totalTime;
+  updateProgressDisplay();
+  startTimer();
+}
+
+// ---------------------------------------------------------------------------------------------------------
+
 // function to start the quiz
 // fonction pour commencer le quiz en cliquant sur le btn-star
 function startQuiz() {
@@ -239,10 +304,11 @@ function startQuiz() {
   nextBtn.innerHTML = "Question Suivante";
 
   // reset + start timer
-  // timeLeft = totalTime;
-  // updateProgressDisplay();
-  // startTimer();
+  timeLeft = totalTime;
+  updateProgressDisplay();
+  startTimer();
 
+  updateScoreDisplay();
   showQuestion();
 }
 startBtn.addEventListener("click", startQuiz);
@@ -252,6 +318,7 @@ startBtn.addEventListener("click", startQuiz);
 // fonction pour afficher la question
 function showQuestion() {
   resetQuestions();
+  updateScoreDisplay();
   let currentQuestion = myQuestions[currentQuestionIndex];
   let questionNumber = currentQuestionIndex + 1;
   questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
@@ -269,6 +336,15 @@ function showQuestion() {
     }
     button.addEventListener("click", selectAnswer);
   });
+  resetTimer();
+}
+
+// function reset questions
+function resetQuestions() {
+  nextBtn.style.display = "none";
+  while (answerBtns.firstChild) {
+    answerBtns.removeChild(answerBtns.firstChild);
+  }
 }
 
 // function to select an answer
@@ -278,6 +354,7 @@ function selectAnswer(event) {
   if (isCorrect) {
     selectBtn.classList.add("correct");
     score++;
+    updateScoreDisplay();
   } else {
     selectBtn.classList.add("incorrect");
   }
@@ -288,6 +365,8 @@ function selectAnswer(event) {
     button.disabled = true;
   });
   nextBtn.style.display = "block";
+
+  clearInterval(timerInterval)
 }
 
 // function for next button
@@ -295,6 +374,9 @@ function goNextQuestion() {
   currentQuestionIndex++;
   if (currentQuestionIndex < myQuestions.length) {
     showQuestion();
+  } else {
+    clearInterval(timerInterval);
+    showScore();
   }
 }
 nextBtn.addEventListener("click", () => {
@@ -305,13 +387,6 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// function reset questions
-function resetQuestions() {
-  nextBtn.style.display = "none";
-  while (answerBtns.firstChild) {
-    answerBtns.removeChild(answerBtns.firstChild);
-  }
-}
 
 // function to display score
 function updateScoreDisplay() {
@@ -323,3 +398,8 @@ function updateScoreDisplay() {
     button.classList.add("incorrect");
   }
 }
+  const scoreDisplay = document.getElementById('score-display');
+  if (scoreDisplay) {
+    scoreDisplay.innerHTML = `Score: ${score} / ${myQuestions.length}`;
+  }}
+
