@@ -46,7 +46,19 @@
 
         <!-- section questions du quiz -->
         <div class="quiz-section">
-            <div class="question">Quelle est la capitale de l'Europe ?</div>
+            
+            <div id="score-display"></div>
+            <div class="question-timer-wrapper">
+
+                <div class="question">Quelle est la capitale de l'Europe ?</div>
+                <div class="timer-container">
+                    <svg>
+                        <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                        <circle class="circle-progress" id="progressCircle" cx="60" cy="60" r="50"></circle>
+                    </svg>
+                    <div class="show-timer" id="showTimer">30</div>
+                </div>
+            </div>
             <div class="button-choices">
                 <button class="btn-choice">Londres</button>
                 <button class="btn-choice">Paris</button>
