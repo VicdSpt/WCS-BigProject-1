@@ -429,9 +429,8 @@ footer {
 
   .container {
     width: 98%;
-    /* prend presque toute la largeur*/
-    margin: 10px auto;
-    /* réduire la marge en haut et en bas*/
+    margin-top: 2px;
+    margin-bottom: 55px;
     padding: 10px;
   }
 
@@ -510,7 +509,7 @@ footer {
   }
 
   footer {
-    position: relative;
+    position: fixed;
     font-size: 0.65rem;
     padding: 8px 5px;
     
