@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    background: url('images-toulon/background.jpg') center/cover fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images-toulon/toulon1.webp') center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.intro {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.grid-item {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-item.history {
+    background: #2c3e50;
+    color: white;
+    grid-column: 1;
+}
+
+.grid-item.history-img {
+    background: url('images-toulon/histoire-toulon.jpg') center/cover;
+    min-height: 400px;
+    grid-column: 2;
+}
+
+.grid-item.port-img {
+    background: url('images-toulon/cdg-2.jpg') center/cover;
+    min-height: 400px;
+    grid-column: 1;
+}
+
+.grid-item.port {
+    background: #34495e;
+    color: white;
+    grid-column: 2;
+}
+
+.grid-item.rugby {
+    background: #c0392b;
+    color: white;
+    grid-column: 1;
+}
+
+.grid-item.rugby-img {
+    background: url('images-toulon/toulon-3.jpg') center/cover;
+    min-height: 400px;
+    grid-column: 2;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+/* css provisoire pour le menu burger */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    height: 4rem;
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo-wcs {
+    width: 75px;
+    height: auto;
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    background-color: #1e3a5f;
+    width: 200px;
+    border-radius: 0 0 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s;
+}
+
+.menu-link:hover {
+    background-color: #2d5487;
+}
+
+.menu-link:last-child {
+    border-bottom: none;
+    border-radius: 0 0 0 10px;
+}

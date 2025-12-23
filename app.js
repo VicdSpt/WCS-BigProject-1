@@ -204,6 +204,16 @@ const myQuestions = [
       { text: "Muscadet", correct: true },
     ],
   },
+  {
+    question: "Qui est ton élève préféré 💖 ?",
+    image: "images/WCS/teacher.png",
+    answers: [
+      { text: "Marine", correct: true },
+      { text: "Kevan", correct: true },
+      { text: "Victor", correct: true },
+      { text: "Victor", correct: true },
+    ],
+  },
 ];
 
 // Variables pour gérer le quiz
@@ -302,6 +312,24 @@ function startQuiz() {
   startSection.style.display = "none";
   quizSection.style.display = "block";
 
+  // show score again for new party
+  const scoreDisplay = document.getElementById("scoreDisplay");
+  if (scoreDisplay) {
+    scoreDisplay.style.display = "block";
+  }
+
+  // Show image and timer again
+  const questionImage = document.querySelector(".question-image");
+  const timerContainer = document.querySelector(".timer-container");
+
+  if (questionImage) {
+    questionImage.style.display = "block";
+  }
+
+  if (timerContainer) {
+    timerContainer.style.display = "block";
+  }
+
   nextBtn.innerHTML = "Question Suivante";
 
   // reset + start timer
@@ -392,6 +420,47 @@ nextBtn.addEventListener("click", () => {
 function updateScoreDisplay() {
   const scoreDisplay = document.getElementById("score-display");
   if (scoreDisplay) {
-    scoreDisplay.innerHTML = `Score: ${score} / ${myQuestions.length}`;
+    // display or hide that part at the end of quiz
+    if (currentQuestionIndex >= myQuestions.length) {
+      scoreDisplay.style.display = "none";
+    } else {
+      scoreDisplay.style.display = "block";
+      scoreDisplay.innerHTML = `Score: ${score} / ${myQuestions.length}`;
+    }
   }
+}
+
+function showScore() {
+  resetQuestions();
+
+  // hide image + timer at the end
+  updateScoreDisplay();
+  const hideImage = document.querySelector(".question-image");
+  const hideTimer = document.querySelector(".timer-container");
+
+  if (hideImage) {
+    hideImage.style.display = "none";
+  }
+
+  if (hideTimer) {
+    hideTimer.style.display = "none";
+  }
+
+  let message = "";
+
+  if (score === 21) {
+    message = "Parfait 🎉🔥";
+  } else if (score >= 18) {
+    message = "Super, presque parfait 👏🏽";
+  } else if (score >= 10) {
+    message = "Pas mal, continue ! 💪🏽";
+  } else if (score >= 5) {
+    message = "lol 🤣";
+  } else {
+    message = "Pas foufou Yavuz !";
+  }
+
+  questionElement.innerHTML = `Ton score est de ${score} / ${myQuestions.length}<br><br>${message}`;
+  nextBtn.innerHTML = "Nouvelle partie ?";
+  nextBtn.style.display = "block";
 }
