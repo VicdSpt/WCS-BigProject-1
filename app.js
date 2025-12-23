@@ -53,13 +53,13 @@ const myQuestions = [
     ],
   },
   {
-    question: "Quel est le principal port de Toulon ?",
+    question: "Quel est le surnom donné à Toulon ?",
     image: "images/Toulon/toulon1.webp",
     answers: [
-      { text: "Port de Nice", correct: false },
-      { text: "La Rade de Toulon", correct: true },
-      { text: "Port de Marseille", correct: false },
-      { text: "Port de Cannes", correct: false },
+      { text: "La Cité phocéenne", correct: false },
+      { text: "La rade", correct: true },
+      { text: "La ville rose", correct: false },
+      { text: "La belle endormie", correct: false },
     ],
   },
   {
@@ -83,24 +83,24 @@ const myQuestions = [
     ],
   },
   {
-    question: "Quel événement militaire est associé à Toulon ?",
+    question: "Quel est le nom du porte-avions actuellement amarré à Toulon ?",
     image: "images/Toulon/cdg-1.jpg",
     answers: [
-      { text: "La base navale de la Marine nationale", correct: true },
-      { text: "Les Jeux Olympiques", correct: false },
-      { text: "Le Festival de Cannes", correct: false },
-      { text: "Le Salon de l'Agriculture", correct: false },
+      { text: "Charles de Gaulle", correct: true },
+      { text: "Foch", correct: false },
+      { text: "Clemenceau", correct: false },
+      { text: "Jeanne d'Arc", correct: false },
     ],
   },
   {
     question:
-      "Quel est le monument emblématique de Toulon surplombant la ville ?",
+      "Quel mont surplombe Toulon et offre une vue panoramique sur la rade ?",
     image: "images/Toulon/26352604.jpg",
     answers: [
-      { text: "La Tour Eiffel", correct: false },
+      { text: "Le Mont Ventoux", correct: false },
       { text: "Le Mont Faron", correct: true },
-      { text: "La Cathédrale de Notre-Dame de la Garde", correct: false },
-      { text: "Le Château", correct: false },
+      { text: "Le Mont Sainte-Victoire", correct: false },
+      { text: "Le Mont Caume", correct: false },
     ],
   },
   {
