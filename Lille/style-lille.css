@@ -12,22 +12,91 @@ body {
     background-image: url(images/eu-map.jpg);
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    height: 4rem;
-    background-color: #1e3a5f;
-    position: sticky;
-    z-index: 10;
-    top: 0;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  height: 4rem;
+  background-color: #1e3a5f;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+}
+h1 {
+    color: #fff;
+}
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex; /* ← flex pour afficher les 3 barres */
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  z-index: 1000;
 }
 
-h1 {
-    color: #ffffffd3;
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
+
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  background-color: #1e3a5f;
+  width: 200px;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+}
+
+.menu-link:hover {
+  background-color: #2d5487;
+}
+
+.menu-link:last-child {
+  border-bottom: none;
+  border-radius: 0 0 0 10px;
+}
+
+.logo-wcs {
+  width: 75px;
+  height: auto;
+}
+
 
 .section {
     background-color: rgba(218, 218, 218, 0.9);
@@ -36,7 +105,7 @@ h1 {
     margin: 100px auto;
     padding: 20px;
     border-radius: 12px;
-    
+
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -48,7 +117,7 @@ footer {
     font-weight: 600;
     padding: 15px 10px;
     line-height: 1.6;
-   
+
     position: fixed;
     width: 100%;
     bottom: 0;
